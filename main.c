@@ -26,4 +26,6 @@ int main()
   printf("12 bit: %f\n", uniRunner12); //Prints out 3
   printf("16 bit: %f\n", uniRunner16); //Prints out 4
 
+
+//The answer is to divide the number by 4, and then add 1/4 to the final number
 }
