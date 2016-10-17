@@ -1,0 +1,19 @@
+CC=gcc
+CFLAGS=-g -Wall
+
+all:main
+
+main: main.o Bitruns.o
+	$(CC) main.o Bitruns.o -o bwdemo
+
+main.o: main.c Bitruns.c Bitruns.h
+	$(CC) $(CFLAGS) -c main.c
+
+Bitruns.o: Bitruns.c Bitruns.h
+	$(CC) $(CFLAGS) -c Bitruns.c
+
+clean:
+	rm -f *.o *~ bwdemo
+
+debug: all
+	cgdb bwdemo
